@@ -1,10 +1,12 @@
+import About from "./layout/About";
 import Hero from "./layout/Hero";
 
 function App() {
 	return (
 		<>
-			<main className="bg-[#e0dad1] text-[#312a22]">
+			<main className="bg-beige text-primary">
 				<Hero />
+				<About />
 			</main>
 		</>
 	);

@@ -5,7 +5,21 @@
 	src: url("./assets/fonts/ClashDisplay-Variable.ttf") format("truetype");
 }
 
+:root {
+	--color-beige: #ebe7e3;
+}
+
 @theme {
+	--color-primary: #312a22;
+	--color-beige: #ebe7e3;
+
+	--color-black: #333;
+	--color-dark-gray: #555;
+	--color-muted: #aaa;
+
+	--font-default: "Clash Display", Arial, sans-serif;
+	--font-inter: "Inter", Arial, sans-serif;
+
 	--inset-shadow-button: inset 0px -6px 15px -6px rgba(255, 255, 255, 1);
 	--inset-shadow-button-hover:
 		inset 0px -6px 15px -10px rgba(255, 255, 255, 1),
@@ -15,6 +29,5 @@
 body {
 	width: 100%;
 	overflow-x: hidden;
-
 	font-family: "Clash Display", Arial, Helvetica, sans-serif;
 }
