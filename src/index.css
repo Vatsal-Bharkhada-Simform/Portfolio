@@ -5,6 +5,13 @@
 	src: url("./assets/fonts/ClashDisplay-Variable.ttf") format("truetype");
 }
 
+@theme {
+	--inset-shadow-button: inset 0px -6px 15px -6px rgba(255, 255, 255, 1);
+	--inset-shadow-button-hover:
+		inset 0px -6px 15px -10px rgba(255, 255, 255, 1),
+		0px 4px 20px -5px #312a22;
+}
+
 body {
 	width: 100%;
 	overflow-x: hidden;

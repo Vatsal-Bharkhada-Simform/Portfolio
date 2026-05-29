@@ -12,7 +12,7 @@ export default function HeroHead() {
 	);
 }
 
-function NavItem({ href, title }) {
+function NavItem({ href, title }: { href: string; title: string }) {
 	return (
 		<li className="text-2xl font-medium">
 			<a href={href}>{title}</a>
