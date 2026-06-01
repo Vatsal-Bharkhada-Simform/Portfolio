@@ -8,7 +8,7 @@ type Projects = {
 	name: string;
 	description: string;
 	url: string;
-    imageUrl: string;
+	imageUrl: string;
 };
 
 const projects: Projects[] = [

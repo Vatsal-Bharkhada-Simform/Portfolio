@@ -29,6 +29,10 @@
 	--shadow-p-uniform: 0px 0px 40px 0px #312a2230;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	width: 100%;
 	overflow-x: hidden;

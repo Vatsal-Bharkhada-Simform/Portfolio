@@ -69,7 +69,10 @@ export default function Contact() {
 	}
 
 	return (
-		<section className="min-h-screen bg-white px-12 md:px-56 py-24 flex items-center">
+		<section
+			id="contact"
+			className="min-h-screen bg-white px-12 md:px-56 py-24 flex items-center"
+		>
 			<div className="flex gap-4 p-8 rounded-[4rem] shadow-p-uniform">
 				<div className="flex-1 flex flex-col justify-between p-8">
 					<div className="flex flex-col gap-6">
@@ -82,14 +85,22 @@ export default function Contact() {
 						</span>
 					</div>
 					<div className="flex gap-4">
-						<a href="#github">
+						<a
+							href="https://github.com/Vatsal-Bharkhada-Simform"
+							target="_blank"
+							referrerPolicy="no-referrer"
+						>
 							<img
 								src={github_svg}
 								alt="GitHub logo"
 								className="w-14"
 							/>
 						</a>
-						<a href="#linkedin">
+						<a
+							href="https://www.linkedin.com/in/vatsal-bharkhada-22634827b"
+							target="_blank"
+							referrerPolicy="no-referrer"
+						>
 							<img
 								src={linkedin_svg}
 								alt="Linkedin logo"

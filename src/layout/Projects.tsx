@@ -4,7 +4,10 @@ import arrow_link from "../assets/icons/arrow_link.svg";
 export default function Projects() {
 	return (
 		<>
-			<section className="min-h-screen flex flex-col gap-12 bg-white px-12 md:px-48 py-24">
+			<section
+				id="projects"
+				className="min-h-screen flex flex-col gap-12 bg-white px-12 md:px-48 py-24"
+			>
 				<div>
 					<h2 className="text-5xl">Projects</h2>
 				</div>
