@@ -10,7 +10,7 @@ interface FormData extends Record<string, string> {
 	email: string;
 	contact: string;
 	message: string;
-};
+}
 
 export default function Contact() {
 	const [formData, setFormData] = useState<FormData>({

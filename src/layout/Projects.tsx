@@ -9,7 +9,9 @@ export default function Projects() {
 				className="min-h-screen flex flex-col gap-8 md:gap-12 bg-white px-6 md:px-16 lg:px-48 py-12 md:py-16 lg:py-24"
 			>
 				<div>
-					<h2 className="text-4xl md:text-5xl font-semibold">Projects</h2>
+					<h2 className="text-4xl md:text-5xl font-semibold">
+						Projects
+					</h2>
 				</div>
 				<div className="py-8 grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-12">
 					{projects.map((project) => {
