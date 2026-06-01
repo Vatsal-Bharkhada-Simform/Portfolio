@@ -12,6 +12,7 @@
 @theme {
 	--color-primary: #312a22;
 	--color-beige: #ebe7e3;
+	--color-beige-translucent: #ebe7e390;
 
 	--color-black: #333;
 	--color-dark-gray: #555;

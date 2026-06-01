@@ -17,11 +17,11 @@ export default function About() {
 					</h2>
 				</div>
 				<span className="w-full h-px bg-gray-200"></span>
-				<div className="text-2xl font-inter font-light text-dark-gray">
+				<div className="text-2xl font-inter font-light text-dark-gray tracking-tight">
 					Currently working as React.js trainee at Simform, Ahmedabad.
 				</div>
-				<div className="text-2xl font-inter font-light text-dark-gray">
-					<h3 className="font-medium mb-4">Core disciplines:</h3>
+				<div className="text-2xl font-inter font-light text-dark-gray tracking-tight">
+					<h3 className="font-semibold mb-4">Core disciplines:</h3>
 					<ul className="list-none text-xl flex flex-col gap-4">
 						<li>Component design</li>
 						<li>User Experience research</li>

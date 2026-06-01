@@ -1,7 +1,7 @@
 export default function HeroHead() {
 	return (
 		<header className="fixed top-0 left-0 w-full p-2 flex justify-center">
-			<nav className="flex w-5xl px-12 py-8 rounded-[20rem] backdrop-blur-md">
+			<nav className="flex w-5xl px-12 py-8 rounded-[20rem] backdrop-blur-lg bg-beige-translucent">
 				<ul className="flex w-full justify-around">
 					<NavItem href={"#"} title={"Projects"} />
 					<NavItem href={"#"} title={"Skills"} />

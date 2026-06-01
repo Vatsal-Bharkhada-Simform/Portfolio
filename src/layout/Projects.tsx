@@ -22,7 +22,7 @@ export default function Projects() {
 										<a href={project.url} className="no-underline hover:underline">{project.name}</a>
                                         <img src={arrow_link} alt="link icon" className="w-5 inline-block ml-2 align-middle" />
 									</h3>
-									<div className="font-inter font-light">{project.description}</div>
+									<div className="font-inter font-light tracking-tight text-lg">{project.description}</div>
 								</div>
 							</div>
 						);
