@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 import Input from "../UI/Input";
 import Textarea from "../UI/Textarea";
 
-type FormData = {
+interface FormData extends Record<string, string> {
 	name: string;
 	email: string;
 	contact: string;
