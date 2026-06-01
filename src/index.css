@@ -6,13 +6,13 @@
 }
 
 :root {
-	--color-beige: #ebe7e3;
+	--color-beige: #f1efeb;
 }
 
 @theme {
 	--color-primary: #312a22;
-	--color-beige: #ebe7e3;
-	--color-beige-translucent: #ebe7e390;
+	--color-beige: #f1efeb;
+	--color-beige-translucent: #f1efeb90;
 
 	--color-black: #333;
 	--color-dark-gray: #555;
@@ -25,6 +25,8 @@
 	--inset-shadow-button-hover:
 		inset 0px -6px 15px -10px rgba(255, 255, 255, 1),
 		0px 4px 20px -5px #312a22;
+
+	--shadow-p-uniform: 0px 0px 40px 0px #312a2230;
 }
 
 body {

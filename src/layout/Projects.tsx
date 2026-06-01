@@ -15,14 +15,25 @@ export default function Projects() {
 								<img
 									src={project.imageUrl}
 									alt={`${project.name} image`}
-                                    className="rounded-2xl"
+									className="rounded-2xl"
 								/>
 								<div className="py-8 px-2 flex flex-col gap-4">
 									<h3 className="text-2xl font-semibold">
-										<a href={project.url} className="no-underline hover:underline">{project.name}</a>
-                                        <img src={arrow_link} alt="link icon" className="w-5 inline-block ml-2 align-middle" />
+										<a
+											href={project.url}
+											className="no-underline hover:underline"
+										>
+											{project.name}
+										</a>
+										<img
+											src={arrow_link}
+											alt="link icon"
+											className="w-5 inline-block ml-2 align-middle"
+										/>
 									</h3>
-									<div className="font-inter font-light tracking-tight text-lg">{project.description}</div>
+									<div className="font-inter font-light tracking-tight text-lg">
+										{project.description}
+									</div>
 								</div>
 							</div>
 						);

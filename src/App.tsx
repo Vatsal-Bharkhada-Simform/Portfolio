@@ -1,4 +1,5 @@
 import About from "./layout/About";
+import Contact from "./layout/Contact";
 import Hero from "./layout/Hero";
 import Projects from "./layout/Projects";
 
@@ -9,6 +10,7 @@ function App() {
 				<Hero />
 				<About />
 				<Projects />
+				<Contact />
 			</main>
 		</>
 	);
