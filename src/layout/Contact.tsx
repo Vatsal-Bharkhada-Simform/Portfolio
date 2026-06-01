@@ -71,13 +71,13 @@ export default function Contact() {
 	return (
 		<section
 			id="contact"
-			className="min-h-screen bg-white px-12 md:px-56 py-24 flex items-center"
+			className="min-h-screen bg-white px-4 md:px-8 py-12 md:py-24 flex justify-center items-center"
 		>
-			<div className="flex gap-4 p-8 rounded-[4rem] shadow-p-uniform">
-				<div className="flex-1 flex flex-col justify-between p-8">
+			<div className="flex flex-col md:flex-row w-7xl gap-4 p-6 md:p-8 rounded-4xl md:rounded-[4rem] shadow-p-uniform">
+				<div className="flex-1 flex flex-col justify-between p-4 px-2 md:p-8 gap-8">
 					<div className="flex flex-col gap-6">
-						<h2 className="text-4xl">Get in touch</h2>
-						<span className="text-xl font-inter tracking-tight font-light">
+						<h2 className="text-3xl md:text-4xl">Get in touch</h2>
+						<span className="text-lg md:text-xl font-inter tracking-tight font-light">
 							Liked what you saw, reach me out by filling this
 							form or through the social media handles provided
 							below. Open to any technical interaction or
@@ -93,7 +93,7 @@ export default function Contact() {
 							<img
 								src={github_svg}
 								alt="GitHub logo"
-								className="w-14"
+								className="w-8 md:w-14"
 							/>
 						</a>
 						<a
@@ -104,15 +104,15 @@ export default function Contact() {
 							<img
 								src={linkedin_svg}
 								alt="Linkedin logo"
-								className="w-14"
+								className="w-8 md:w-14"
 							/>
 						</a>
 					</div>
 				</div>
-				<div className="flex-2 bg-beige/80 rounded-[2.4rem] overflow-hidden">
+				<div className="flex-2 bg-beige/80 rounded-2xl md:rounded-[2.4rem] overflow-hidden">
 					<form
 						onSubmit={handleFormSubmit}
-						className="flex flex-col gap-6 p-8"
+						className="flex flex-col gap-6 p-4 md:p-8"
 					>
 						<Input
 							labelText="Name"

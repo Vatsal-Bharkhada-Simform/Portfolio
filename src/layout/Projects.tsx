@@ -6,12 +6,12 @@ export default function Projects() {
 		<>
 			<section
 				id="projects"
-				className="min-h-screen flex flex-col gap-12 bg-white px-12 md:px-48 py-24"
+				className="min-h-screen flex flex-col gap-8 md:gap-12 bg-white px-6 md:px-16 lg:px-48 py-12 md:py-16 lg:py-24"
 			>
 				<div>
-					<h2 className="text-5xl">Projects</h2>
+					<h2 className="text-4xl md:text-5xl font-semibold">Projects</h2>
 				</div>
-				<div className="py-8 grid grid-cols-2 grid-flow-row gap-12">
+				<div className="py-8 grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-12">
 					{projects.map((project) => {
 						return (
 							<div key={project.id}>

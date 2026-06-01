@@ -10,7 +10,7 @@ export default function HeroHead() {
 
 	return (
 		<header className="fixed top-0 left-0 w-full p-2 flex justify-center">
-			<nav className="flex w-5xl px-12 py-8 rounded-[20rem] backdrop-blur-lg bg-beige-translucent">
+			<nav className="flex w-5xl px-4 py-4 md:px-12 md:py-8 rounded-[20rem] backdrop-blur-md bg-beige-translucent">
 				<ul className="flex w-full justify-around">
 					<NavItem
 						href={"#projects"}
@@ -43,7 +43,7 @@ function NavItem({
 	onClick: (e: React.MouseEvent, id: string) => void;
 }) {
 	return (
-		<li className="text-2xl font-medium">
+		<li className="text-lg md:text-2xl font-medium">
 			<a href={href} onClick={(e) => clickHandler(e, href.split("#")[1])}>
 				{title}
 			</a>
