@@ -1,7 +1,7 @@
 type NavItemType = {
-    href: string,
-    title: string
-}
+	href: string;
+	title: string;
+};
 
 const navItems: NavItemType[] = [
 	{
@@ -31,13 +31,15 @@ export default function HeroHead() {
 		<header className="fixed top-0 left-0 w-full p-2 flex justify-center">
 			<nav className="flex w-5xl px-4 py-4 md:px-12 md:py-8 rounded-[20rem] backdrop-blur-md bg-beige-translucent">
 				<ul className="flex w-full justify-around">
-					{
-                        navItems.map((item) => {
-                            return (
-                                <NavItem href={item.href} title={item.title} onClick={handleClick} />
-                            )
-                        })
-                    }
+					{navItems.map((item) => {
+						return (
+							<NavItem
+								href={item.href}
+								title={item.title}
+								onClick={handleClick}
+							/>
+						);
+					})}
 				</ul>
 			</nav>
 		</header>

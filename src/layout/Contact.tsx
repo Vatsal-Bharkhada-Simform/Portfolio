@@ -118,6 +118,7 @@ export default function Contact() {
 							labelText="Name"
 							type="text"
 							placeholder="Enter your name"
+							id="name"
 							name="name"
 							value={formData.name}
 							onInput={handleChange}
@@ -127,6 +128,7 @@ export default function Contact() {
 							labelText="Email"
 							type="email"
 							placeholder="Enter your email"
+							id="email"
 							name="email"
 							value={formData.email}
 							onInput={handleChange}
@@ -136,6 +138,7 @@ export default function Contact() {
 							labelText="Contact"
 							type="tel"
 							placeholder="Enter your contact number"
+							id="contact"
 							name="contact"
 							minLength={10}
 							maxLength={10}
@@ -144,8 +147,10 @@ export default function Contact() {
 							required
 						/>
 						<Textarea
+							labelText="Messsage"
 							placeholder="How can I help"
 							rows={4}
+							id="message"
 							name="message"
 							maxLength={500}
 							value={formData.message}
