@@ -23,13 +23,6 @@ export default function Contact() {
 	function handleChange(e: React.InputEvent) {
 		const { name, value } = e.target as HTMLInputElement;
 
-		if (
-			name === "contact" &&
-			(value.trim() === formData.contact || isNaN(Number(value.trim())))
-		) {
-			return;
-		}
-
 		setFormData((prev) => {
 			return {
 				...prev,
@@ -48,12 +41,12 @@ export default function Contact() {
 			}
 		}
 
-		if (!formData.email.includes("@") || !formData.email.includes(".")) {
+		if (!(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/).test(formData.email)) {
 			alert("Please provide a proper email");
 			return;
 		}
 
-		if (formData.contact.length !== 10) {
+		if (!(/^\d{10}$/).test(formData.contact)) {
 			alert("Please provide a proper contact number");
 			return;
 		}
@@ -120,6 +113,7 @@ export default function Contact() {
 							placeholder="Enter your name"
 							id="name"
 							name="name"
+                            maxLength={50}
 							value={formData.name}
 							onInput={handleChange}
 							required
@@ -130,6 +124,7 @@ export default function Contact() {
 							placeholder="Enter your email"
 							id="email"
 							name="email"
+                            maxLength={100}
 							value={formData.email}
 							onInput={handleChange}
 							required
@@ -147,7 +142,7 @@ export default function Contact() {
 							required
 						/>
 						<Textarea
-							labelText="Messsage"
+							labelText="Message"
 							placeholder="How can I help"
 							rows={4}
 							id="message"
