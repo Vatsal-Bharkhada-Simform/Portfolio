@@ -11,7 +11,7 @@ const buttonClassNames: Record<Variant, string> = {
 
 export default function Button({ variant, ...props }: ButtonProps) {
 	return (
-		<button className={`${buttonClassNames[variant]} ${props.className}`}>
+		<button className={`${buttonClassNames[variant]} ${props.className ?? ""}`}>
 			{props.children}
 		</button>
 	);
