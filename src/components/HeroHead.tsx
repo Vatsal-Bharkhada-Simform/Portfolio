@@ -37,6 +37,7 @@ export default function HeroHead() {
 								href={item.href}
 								title={item.title}
 								onClick={handleClick}
+                                key={item.title}
 							/>
 						);
 					})}
