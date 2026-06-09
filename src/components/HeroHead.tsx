@@ -4,13 +4,13 @@ type NavItemType = {
 };
 
 const navItems: NavItemType[] = [
+    {
+        href: "#about",
+        title: "About",
+    },
 	{
 		href: "#projects",
 		title: "Projects",
-	},
-	{
-		href: "#about",
-		title: "About",
 	},
 	{
 		href: "#contact",
