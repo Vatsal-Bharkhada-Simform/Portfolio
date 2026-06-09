@@ -13,15 +13,14 @@ export default function Hero() {
 				</h2>
 				<div>
 					<a
-                        href="#projects"
+						href="#projects"
 						className="bg-primary text-white cursor-pointer px-6 py-2 md:py-4 rounded-4xl text-lg md:text-xl tracking-normal inset-shadow-button hover:inset-shadow-button-hover transition-all duration-300"
-						onClick={() =>
-							(
-								document.getElementById(
-									"projects"
-								) as HTMLElement
-							)?.scrollIntoView()
-						}
+						onClick={() => {
+							const element = document.getElementById("projects");
+							if (element && element instanceof HTMLElement) {
+								element.scrollIntoView();
+							}
+						}}
 					>
 						View Projects
 					</a>

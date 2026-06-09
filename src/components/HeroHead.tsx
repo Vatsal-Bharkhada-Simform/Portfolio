@@ -4,10 +4,10 @@ type NavItemType = {
 };
 
 const navItems: NavItemType[] = [
-    {
-        href: "#about",
-        title: "About",
-    },
+	{
+		href: "#about",
+		title: "About",
+	},
 	{
 		href: "#projects",
 		title: "Projects",
@@ -37,7 +37,7 @@ export default function HeroHead() {
 								href={item.href}
 								title={item.title}
 								onClick={handleClick}
-                                key={item.title}
+								key={item.title}
 							/>
 						);
 					})}
