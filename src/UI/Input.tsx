@@ -16,6 +16,9 @@ export default function Input({
 					className="text-base md:text-lg font-inter tracking-tight text-primary"
 				>
 					{labelText}
+                    {
+                        props.required && <span className="text-sm">*</span>
+                    }
 				</label>
 				<input
 					type={type}

@@ -37,7 +37,7 @@ export default function Contact() {
 		e.preventDefault();
 
 		for (const key in formData) {
-			if (formData[key as keyof FormData].trim() === "") {
+			if (key !== "message" && formData[key as keyof FormData].trim() === "") {
 				alert("Please fill in all the form fields");
 				return;
 			}
@@ -161,7 +161,6 @@ export default function Contact() {
 							maxLength={500}
 							value={formData.message}
 							onChange={handleChange}
-							required
 						/>
 						<div>
 							<Button
