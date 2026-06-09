@@ -1,8 +1,18 @@
+import About from "./layout/About";
+import Contact from "./layout/Contact";
+import Hero from "./layout/Hero";
+import Projects from "./layout/Projects";
+
 function App() {
 	return (
 		<>
-            <h1>Hii</h1>
-        </>
+			<main className="bg-beige text-primary">
+				<Hero />
+				<About />
+				<Projects />
+				<Contact />
+			</main>
+		</>
 	);
 }
 

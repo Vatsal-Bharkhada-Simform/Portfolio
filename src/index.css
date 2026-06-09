@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: "Clash Display";
+	src: url("./assets/fonts/ClashDisplay-Variable.ttf") format("truetype");
+}
+
+:root {
+	--color-beige: #f1efeb;
+}
+
+@theme {
+	--color-primary: #312a22;
+	--color-beige: #f1efeb;
+	--color-beige-translucent: #f1efeb90;
+
+	--color-black: #333;
+	--color-dark-gray: #555;
+	--color-muted: #aaa;
+
+	--font-default: "Clash Display", Arial, sans-serif;
+	--font-inter: "Inter", Arial, sans-serif;
+
+	--inset-shadow-button: inset 0px -6px 15px -6px rgba(255, 255, 255, 1);
+	--inset-shadow-button-hover:
+		inset 0px -6px 15px -10px rgba(255, 255, 255, 1),
+		0px 4px 20px -5px #312a22;
+
+	--shadow-p-uniform: 0px 0px 40px 0px #312a2230;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	width: 100%;
+	overflow-x: hidden;
+	font-family: "Clash Display", Arial, Helvetica, sans-serif;
+}
