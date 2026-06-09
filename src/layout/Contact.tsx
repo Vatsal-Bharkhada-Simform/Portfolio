@@ -36,8 +36,8 @@ export default function Contact() {
 	function handleFormSubmit(e: SubmitEvent<HTMLFormElement>) {
 		e.preventDefault();
 
-		for (const value in formData) {
-			if (formData[value as keyof FormData].trim() === "") {
+		for (const key in formData) {
+			if (formData[key as keyof FormData].trim() === "") {
 				alert("Please fill in all the form fields");
 				return;
 			}
