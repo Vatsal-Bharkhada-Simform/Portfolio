@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, type ChangeEvent, type SubmitEvent } from "react";
 import github_svg from "../assets/icons/github.svg";
 import linkedin_svg from "../assets/icons/linkedin.svg";
 import Button from "../UI/Button";
 import Input from "../UI/Input";
 import Textarea from "../UI/Textarea";
 
-interface FormData extends Record<string, string> {
+interface FormData {
 	name: string;
 	email: string;
 	contact: string;
@@ -20,8 +20,10 @@ export default function Contact() {
 		message: "",
 	});
 
-	function handleChange(e: React.InputEvent) {
-		const { name, value } = e.target as HTMLInputElement;
+	function handleChange(
+		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) {
+		const { name, value } = e.target;
 
 		setFormData((prev) => {
 			return {
@@ -31,22 +33,31 @@ export default function Contact() {
 		});
 	}
 
-	function handleFormSubmit(e: React.SubmitEvent) {
+	function handleFormSubmit(e: SubmitEvent<HTMLFormElement>) {
 		e.preventDefault();
 
 		for (const value in formData) {
-			if (formData[value].trim() === "") {
+			if (formData[value as keyof FormData].trim() === "") {
 				alert("Please fill in all the form fields");
 				return;
 			}
 		}
 
-		if (!(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/).test(formData.email)) {
+		if (!/^[A-Za-z. ]+$/.test(formData.name)) {
+			alert("Please provide a proper name");
+			return;
+		}
+
+		if (
+			!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
+				formData.email
+			)
+		) {
 			alert("Please provide a proper email");
 			return;
 		}
 
-		if (!(/^\d{10}$/).test(formData.contact)) {
+		if (!/^\d{10}$/.test(formData.contact)) {
 			alert("Please provide a proper contact number");
 			return;
 		}
@@ -81,7 +92,7 @@ export default function Contact() {
 						<a
 							href="https://github.com/Vatsal-Bharkhada-Simform"
 							target="_blank"
-							referrerPolicy="no-referrer"
+							rel="noopener noreferrer"
 						>
 							<img
 								src={github_svg}
@@ -92,7 +103,7 @@ export default function Contact() {
 						<a
 							href="https://www.linkedin.com/in/vatsal-bharkhada-22634827b"
 							target="_blank"
-							referrerPolicy="no-referrer"
+							rel="noopener noreferrer"
 						>
 							<img
 								src={linkedin_svg}
@@ -113,9 +124,9 @@ export default function Contact() {
 							placeholder="Enter your name"
 							id="name"
 							name="name"
-                            maxLength={50}
+							maxLength={50}
 							value={formData.name}
-							onInput={handleChange}
+							onChange={handleChange}
 							required
 						/>
 						<Input
@@ -124,9 +135,9 @@ export default function Contact() {
 							placeholder="Enter your email"
 							id="email"
 							name="email"
-                            maxLength={100}
+							maxLength={100}
 							value={formData.email}
-							onInput={handleChange}
+							onChange={handleChange}
 							required
 						/>
 						<Input
@@ -138,7 +149,7 @@ export default function Contact() {
 							minLength={10}
 							maxLength={10}
 							value={formData.contact}
-							onInput={handleChange}
+							onChange={handleChange}
 							required
 						/>
 						<Textarea
@@ -149,7 +160,7 @@ export default function Contact() {
 							name="message"
 							maxLength={500}
 							value={formData.message}
-							onInput={handleChange}
+							onChange={handleChange}
 							required
 						/>
 						<div>
